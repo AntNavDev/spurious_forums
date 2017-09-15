@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('app/app-shell');
-})->name( 'home' );
+    return view('homepage/subject-partial');
+} )->name( 'homepage.subjects' );
+
+Route::get( 'app-shell', function() {
+    return view( 'app/shell' );
+} )->name( 'shell' );
