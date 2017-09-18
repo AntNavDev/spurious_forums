@@ -13,3 +13,14 @@
     color: #807D7E;
     font-size: 3em;
  }
+ .homepage_subjects {
+    margin: 30px;
+    padding: 5px;
+    border: solid 1px #96AFDC;
+    border-radius: 2em;
+    border-width: 2px 4px;
+    width: 60%;
+ }
+ .subject_title {
+    color: #424288;
+ }

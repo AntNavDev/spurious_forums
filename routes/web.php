@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('homepage/subject-partial');
-} )->name( 'homepage.subjects' );
+Route::resource( '/', 'SubjectController' );
+
+// Route::get('/', function () {
+//     return view('homepage/subject-partial');
+// } )->name( 'homepage.subjects' );
 
 Route::get( 'app-shell', function() {
     return view( 'app/shell' );

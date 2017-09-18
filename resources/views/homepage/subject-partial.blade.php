@@ -1,10 +1,11 @@
 @extends( 'app.shell' )
 
 @section( 'content' )
-This is where the subjects will be placed.<br>
-One.<br>
-After.<br>
-The.<br>
-Other.<br>
+    @foreach( $subjects as $subject )
+        <div class="homepage_subjects">
+            <h4 class="subject_title">{{ $subject->title }}</h4>
+            {{ $subject->description }}
+        </div>
+    @endforeach
 
 @endsection
