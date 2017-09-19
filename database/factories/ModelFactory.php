@@ -43,10 +43,11 @@ $factory->define( App\Thread::class, function( Faker $faker ) {
 
 $factory->define( App\Comment::class, function( Faker $faker ) {
     $thread_id = rand( 1, 19 );
+    $author_id = rand( 1, 14 );
 
     return [
         'thread_id'  => $thread_id,
         'description' => $faker->text( 35 ),
-        'author'      => $faker->name(),
+        'author'      => $author_id,
     ];
 } );

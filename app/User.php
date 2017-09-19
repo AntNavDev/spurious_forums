@@ -39,8 +39,15 @@ class User extends Authenticatable
         return ( $this->role === 'admin' );
     }
 
-    public function tasks()
+    public function comments()
     {
-        return $this->hasMany( 'App\Task' );
+        return $this->hasMany( 'App\Comment' );
+    }
+
+    public static function getNameFromId( $id )
+    {
+        $user = User::find( $id );
+
+        return $user->getFullName();
     }
 }

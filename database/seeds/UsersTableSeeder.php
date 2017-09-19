@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use App\User;
+
 class UsersTableSeeder extends Seeder
 {
     /**
@@ -11,6 +13,15 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory( 'App\User', 1 )->create();
+        User::insert( [
+            'first_name'     => 'Anthony',
+            'last_name'      => 'Navarro',
+            'email'          => 'anavarro@three29.com',
+            'password'       => '$2y$10$UHVBr8XE8oVXwHqOFBV6eO1U5CpTgtHAi2QsYqDYUSZ2pZoLnFB9C', //this encoded password is 'testing'
+            'role'           => 'admin',
+            'remember_token' => str_random(10),
+        ] );
+
+        factory( 'App\User', 15 )->create();
     }
 }

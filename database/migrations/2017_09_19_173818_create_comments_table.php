@@ -17,7 +17,7 @@ class CreateCommentsTable extends Migration
             $table->increments('id');
             $table->integer('thread_id')->references( 'thread' )->on( 'id' );
             $table->string('description');
-            $table->string('author');
+            $table->integer('author')->references( 'user' )->on( 'id' );
             $table->timestamps();
         });
     }
