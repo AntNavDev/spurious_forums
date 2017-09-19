@@ -19,6 +19,7 @@
             <h4 class="subject_title">'{{ $comment->description }}'</h4>
             Posted by: {{ User::getNameFromId( $comment->author ) }}
             @if( $comment->author == Auth::user()->id )
+                <a href="{{ route( 'comment.edit', $comment ) }}" class="btn edit_comment_button"><i class="fa fa-pencil-square-o" aria-hidden="true">edit</i></a>
                 <form action="{{ route( 'comment.destroy', $comment ) }}" method="POST" style="display: inline-block;">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}

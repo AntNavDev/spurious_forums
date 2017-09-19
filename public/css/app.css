@@ -15,6 +15,13 @@
     top: 0px;
     right: 0px;
 }
+.edit_comment_button {
+    color: #89C7E2;
+    background-color: #F2F6F9;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+}
  .title_bar {
     text-align: center;
     color: #807D7E;
@@ -44,7 +51,13 @@
     width: 60%;
  }
  .sidebar {
-
+    background-color: #364F5A;
+    min-height: 100vh;
+    color: #FFFFFF;
+ }
+ .sidebar a:visited {
+    color: inherit;
+    text-decoration: none;
  }
  .subject_title {
     color: #424288;

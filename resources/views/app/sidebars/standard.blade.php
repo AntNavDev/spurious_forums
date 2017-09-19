@@ -5,8 +5,16 @@
         </div>
     </div>
     @guest
-        <h4><a href="{{ route( 'register' ) }}" class"">Register</a></h4>
-        <h4>Already a member? <a href="{{ route( 'login' ) }}" class"">Login</a></h4>
+        <div class="row">
+            <div class="col-md-12">
+                <h4><a href="{{ route( 'register' ) }}" class"">Register</a></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4><a href="{{ route( 'login' ) }}" class"">Login</a></h4>
+            </div>
+        </div>
     @endguest
     @auth
         <div class="row">

@@ -69,6 +69,7 @@ class CommentController extends Controller
      */
     public function edit(Comment $comment)
     {
+        dd('gonna build this later...');
         //
     }
 
