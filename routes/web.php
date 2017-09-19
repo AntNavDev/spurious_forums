@@ -12,7 +12,7 @@
 */
 Route::resource( 'subject', 'SubjectController' );
 Route::resource( 'thread', 'ThreadController' );
-Route::resource( 'comment', 'CommentController', [ 'only' => [ 'store' ] ] );
+Route::resource( 'comment', 'CommentController', [ 'only' => [ 'store', 'destroy' ] ] );
 
 Route::get('/', 'HomepageController@index' )->name( 'homepage' );
 

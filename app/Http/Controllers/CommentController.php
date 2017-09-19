@@ -92,6 +92,11 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        //
+        $thread = Thread::find( $comment->thread_id );
+        $comment = Comment::find( $comment->id );
+
+        $comment->delete();
+
+        return redirect()->route( 'thread.myComments', compact( 'thread' ) );
     }
 }
