@@ -11,6 +11,7 @@
 |
 */
 Route::resource( 'subject', 'SubjectController' );
+Route::resource( 'thread', 'ThreadController' );
 
 Route::get('/', 'HomepageController@index' )->name( 'homepage' );
 
@@ -19,6 +20,7 @@ Route::get( 'app-shell', function() {
 } )->name( 'shell' );
 
 Route::get( 'subject/{subject}', 'SubjectController@myThreads' )->name( 'subject.myThreads' );
+Route::get( 'thread/{thread}', 'ThreadController@myComments' )->name( 'thread.myComments' );
 
 Auth::routes();
 

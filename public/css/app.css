@@ -13,6 +13,12 @@
     color: #807D7E;
     font-size: 3em;
  }
+ .thread_comments {
+    border: 1px solid #000000;
+    padding: 5px;
+    margin: 30px;
+    width: 60%;
+ }
  .homepage_subjects {
     margin: 30px;
     padding: 5px;

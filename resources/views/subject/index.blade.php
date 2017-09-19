@@ -8,7 +8,7 @@
 
 @section( 'content' )
     @foreach( $threads as $thread )
-        <a href="">
+        <a href="{{ route( 'thread.myComments', $thread ) }}">
             <div class="subject_threads">
                 <h4 class="thread_title">{{ $thread->title }}</h4>
                 {{ $thread->description }}

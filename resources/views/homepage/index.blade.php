@@ -14,7 +14,6 @@
                     {{ $subject->description }}
                 </div>
             </a>
-        </form>
     @endforeach
 
 @endsection

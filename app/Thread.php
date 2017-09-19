@@ -12,4 +12,9 @@ class Thread extends Model
     {
         return $this->belongsTo( 'App\Subject' );
     }
+
+    public function comment()
+    {
+        return $this->hasMany( 'App\Comment' );
+    }
 }
