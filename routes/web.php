@@ -10,14 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Subject;
-
 Route::resource( 'subject', 'SubjectController' );
 
-Route::get('/', function () {
-    $subjects = Subject::all();
-    return view('homepage/homepage-yields', compact( 'subjects' ) );
-} )->name( 'homepage' );
+Route::get('/', 'HomepageController@index' )->name( 'homepage' );
 
 Route::get( 'app-shell', function() {
     return view( 'app/shell' );
