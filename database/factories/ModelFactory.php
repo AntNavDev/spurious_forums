@@ -23,9 +23,20 @@ $factory->define( App\Subject::class, function( Faker $faker ) {
 
 
     return [
-        'title'  => $faker->text( 20 ),
-        'description'     => $faker->text( 35 ),
-        'moderators' => $moderators,
+        'title'       => $faker->text( 20 ),
+        'description' => $faker->text( 35 ),
+        'moderators'  => $moderators,
     ];
 
+} );
+
+$factory->define( App\Thread::class, function( Faker $faker ) {
+    $subject_id = rand( 1, 14 );
+
+    return [
+        'subject_id'  => $subject_id,
+        'title'       => $faker->text( 20 ),
+        'description' => $faker->text( 35 ),
+        'author'      => $faker->name(),
+    ];
 } );

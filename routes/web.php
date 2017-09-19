@@ -10,13 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Subject;
 
-Route::resource( '/', 'SubjectController' );
+Route::resource( 'subject', 'SubjectController' );
 
-// Route::get('/', function () {
-//     return view('homepage/subject-partial');
-// } )->name( 'homepage.subjects' );
+Route::get('/', function () {
+    $subjects = Subject::all();
+    return view('homepage/homepage-yields', compact( 'subjects' ) );
+} )->name( 'homepage' );
 
 Route::get( 'app-shell', function() {
     return view( 'app/shell' );
 } )->name( 'shell' );
+
+Route::get( 'subject/{subject}', 'SubjectController@myThreads' )->name( 'subject.myThreads' );
+

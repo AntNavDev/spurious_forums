@@ -29,4 +29,8 @@ class Subject extends Model
     // protected $hidden = [
     //     '',
     // ];
+    public function threads()
+    {
+        return $this->hasMany( 'App\Thread' );
+    }
 }

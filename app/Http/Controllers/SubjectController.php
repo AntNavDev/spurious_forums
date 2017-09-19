@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Subject;
 use Illuminate\Http\Request;
 
+use App\Thread;
+
 class SubjectController extends Controller
 {
     /**
@@ -14,9 +16,7 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        $subjects = Subject::all();
-
-        return view( 'homepage/subject-partial', compact( 'subjects' ) );
+        return view( 'subject.index' );
     }
 
     /**
@@ -83,5 +83,14 @@ class SubjectController extends Controller
     public function destroy(Subject $subject)
     {
         //
+    }
+
+    // Get threads associated with subject  <~~~~~~~~~~~~~~~~Not sure about this yet...
+    public function myThreads( Subject $subject )
+    {
+        $subject = Subject::find( $subject->id );
+        $threads = Thread::where( 'subject_id', '=', $subject->id )->get();
+
+        return view( 'subject.index', compact( 'subject', 'threads' ) );
     }
 }
