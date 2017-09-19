@@ -20,3 +20,6 @@ Route::get( 'app-shell', function() {
 
 Route::get( 'subject/{subject}', 'SubjectController@myThreads' )->name( 'subject.myThreads' );
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
