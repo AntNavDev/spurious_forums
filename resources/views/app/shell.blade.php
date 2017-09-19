@@ -10,15 +10,29 @@
 
 <body>
     <div class="row">
-        @yield( 'title-bar' )
-    </div>
-    <div class="row">
-        <div id="homepage_sidebar" class="col-md-2">
+
+        <div id="homepage_sidebar" class="col-md-2 sidebar">
             @include( 'app.sidebars.standard' )
         </div>
-        <div id="subject_content" class="col-md-10">
-            @yield( 'content' )
+        <div class="col-md-8">
+
+            <div class="row">
+                <div class="col-md-12">
+                    @yield( 'title-bar' )
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="subject_content" class="col-md-12">
+                    @yield( 'content' )
+                </div>
+            </div>
+
         </div>
+
+        <div class="col-md-2">
+        </div>
+
     </div>
 
 </body>

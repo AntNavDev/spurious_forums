@@ -2,7 +2,7 @@
 
 @section( 'title-bar' )
     <div id="title_bar" class="col-md-12">
-        <h3 class="title-bar">Welcome to Spurious Forums!</h3>
+        <h3 class="title_bar">Welcome to Spurious Forums!</h3>
     </div>
 @endsection
 

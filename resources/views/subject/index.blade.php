@@ -2,7 +2,7 @@
 
 @section( 'title-bar' )
     <div id="title_bar" class="col-md-12">
-        <h3 class="title-bar">{{ $subject->title }}</h3>
+        <h3 class="title_bar">{{ $subject->title }}</h3>
     </div>
 @endsection
 
