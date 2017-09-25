@@ -19,7 +19,12 @@
     @auth
         <div class="row">
             <div class="col-md-12">
-                <h4>Welcome, {{ Auth::user()->getFullName() }}</h4>
+                @if( ! Auth::user()->getProfilePic() )
+                    <h4><i class="fa fa-user-circle"></i> {{ Auth::user()->getFullName() }}</h4>
+                @else
+                    <h4><img src="{{ Auth::user()->getProfilePic() }}" class="profile_pic" /> {{ Auth::user()->getFullName() }}</h4>
+                @endif
+                <h4>User Level: {{ ucfirst( Auth::user()->getRole() ) }}</h4>
                 <a href="{{ route( 'logout' ) }}" onclick="event.preventDefault(); document.getElementById( 'logout-form' ).submit();" class="btn btn-danger">Logout</a>
                 <form id="logout-form" action="{{ route( 'logout' ) }}" method="POST" style="display: none;">
                     {{ csrf_field() }}

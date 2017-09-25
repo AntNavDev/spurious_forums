@@ -5,6 +5,8 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 <head>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="{{ asset( 'css/font-awesome-4.7.0/css/font-awesome.css' ) }}">
     <title>{{ config( 'app.name' ) }}</title>
 </head>
 

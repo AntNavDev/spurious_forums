@@ -29,9 +29,26 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    public function getProfilePic()
+    {
+        return $this->profile_picture;
+    }
+
     public function getFullName()
     {
         return ( $this->first_name . ' ' . $this->last_name );
+    }
+
+    public static function getNameFromId( $id )
+    {
+        $user = User::find( $id );
+
+        return $user->getFullName();
     }
 
     public function isAdmin()
@@ -44,10 +61,4 @@ class User extends Authenticatable
         return $this->hasMany( 'App\Comment' );
     }
 
-    public static function getNameFromId( $id )
-    {
-        $user = User::find( $id );
-
-        return $user->getFullName();
-    }
 }
