@@ -24,8 +24,24 @@
                 @else
                     <h4><img src="{{ Auth::user()->getProfilePic() }}" class="profile_pic" /> {{ Auth::user()->getFullName() }}</h4>
                 @endif
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
                 <h4>User Level: {{ ucfirst( Auth::user()->getRole() ) }}</h4>
-                <a href="{{ route( 'logout' ) }}" onclick="event.preventDefault(); document.getElementById( 'logout-form' ).submit();" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h4><i class="fa fa-cogs"></i> <a href="{{ route( 'user.edit', Auth::user() ) }}">Settings</a></h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h4><a href="{{ route( 'logout' ) }}" onclick="event.preventDefault(); document.getElementById( 'logout-form' ).submit();" class="btn btn-danger">Logout</a></h4>
                 <form id="logout-form" action="{{ route( 'logout' ) }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>

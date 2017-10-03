@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::resource( 'user', 'UserController' );
 Route::resource( 'subject', 'SubjectController' );
 Route::resource( 'thread', 'ThreadController' );
 Route::resource( 'comment', 'CommentController', [ 'only' => [ 'store', 'destroy', 'edit' ] ] );
