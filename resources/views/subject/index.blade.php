@@ -7,12 +7,15 @@
 @endsection
 
 @section( 'content' )
-    @foreach( $threads as $thread )
-        <a href="{{ route( 'thread.myComments', $thread ) }}">
-            <div class="subject_threads">
-                <h4 class="thread_title">{{ $thread->title }}</h4>
-                {{ $thread->description }}
-            </div>
-        </a>
-    @endforeach
+    @if( ! empty( $threads ) )
+        @foreach( $threads as $thread )
+            <a href="{{ route( 'thread.myComments', $thread ) }}">
+                <div class="subject_threads">
+                    <h4 class="thread_title">{{ $thread->title }}</h4>
+                    {{ $thread->description }}
+                    <h6 class="align_right">Created by: {{ User::getNameFromId( $thread->author ) }}</h6>
+                </div>
+            </a>
+        @endforeach
+    @endif
 @endsection

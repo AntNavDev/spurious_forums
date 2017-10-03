@@ -23,8 +23,7 @@ Route::get( 'app-shell', function() {
 } )->name( 'shell' );
 
 Route::get( 'subject/{subject}', 'SubjectController@myThreads' )->name( 'subject.myThreads' );
+Route::get( 'subject/create/{subject}', 'SubjectController@create' )->name( 'subject.create' );
 Route::get( 'thread/{thread}', 'ThreadController@myComments' )->name( 'thread.myComments' );
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

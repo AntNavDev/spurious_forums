@@ -18,7 +18,12 @@ $factory->define( App\Subject::class, function( Faker $faker ) {
     $mod_num = rand( 1, 3 );
     for( $index = 0; $index <= $mod_num; $index++ )
     {
-        $moderators[] = $faker->name();
+        $mod_id = rand( 2, 5 );
+        while( in_array( $mod_id, $moderators ) )
+        {
+            $mod_id = rand( 2, 5 );
+        }
+        $moderators[] = $mod_id;
     }
 
 
@@ -32,12 +37,13 @@ $factory->define( App\Subject::class, function( Faker $faker ) {
 
 $factory->define( App\Thread::class, function( Faker $faker ) {
     $subject_id = rand( 1, 14 );
+    $author_id = rand( 1, 15 );
 
     return [
         'subject_id'  => $subject_id,
         'title'       => $faker->text( 20 ),
         'description' => $faker->text( 35 ),
-        'author'      => $faker->name(),
+        'author'      => $author_id,
     ];
 } );
 

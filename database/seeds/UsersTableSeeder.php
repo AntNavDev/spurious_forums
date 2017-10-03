@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
             'email'          => 'anavarro@three29.com',
             'password'       => '$2y$10$UHVBr8XE8oVXwHqOFBV6eO1U5CpTgtHAi2QsYqDYUSZ2pZoLnFB9C', //this encoded password is 'testing'
             'role'           => 'admin',
-            'profile_picture'    => 'http://spurious_forums.dev/storage/icarus.jpg',
+            'profile_picture'    => 'http://spurious_forums.dev/storage/profiles/user-1/sea-nemesis.jpg',
             'remember_token' => str_random(10),
         ] );
 

@@ -24,9 +24,11 @@ class SubjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create( Subject $subject )
     {
-        //
+        $subject = Subject::find( $subject->id );
+
+        return view( 'subject.create', compact( 'subject' ) );
     }
 
     /**
@@ -37,7 +39,19 @@ class SubjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd( $request );
+        $subject = Subject::find( $request[ 'subject_id' ] );
+
+        $new_thread = Thread::create([
+            '' => $subject->id,
+            '' => $request[ 'thread_title' ],
+            '' => $request[ 'thread_description' ],
+            '' => $request[ 'thread_author' ]
+        ]);
+
+        $new_thread->save();
+
+        return redirect()->route();
     }
 
     /**
