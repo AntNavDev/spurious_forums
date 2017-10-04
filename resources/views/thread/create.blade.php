@@ -7,7 +7,7 @@
 @endsection
 
 @section( 'content' )
-    <form action="{{ route( 'subject.store' ) }}" method="POST">
+    <form action="{{ route( 'thread.store' ) }}" method="POST">
         {{ csrf_field() }}
         <div class="align_center post_thread">
             <input type="hidden" id="subject_id" name="subject_id" value="{{ $subject->id }}">
@@ -18,7 +18,7 @@
             <label for="thread_description">
                 <textarea id="thread_description" name="thread_description"></textarea>
             </label><br>
-            <button id="thread_post_button" class="btn btn-success">Post Thread</button>
+            <button type="submit" id="thread_post_button" class="btn btn-success">Post Thread</button>
         </div>
     </form>
 @endsection

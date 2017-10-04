@@ -11,6 +11,6 @@
     </div>
 
     <div class="info_bar">
-        <a href="{{ route( 'subject.create', $subject ) }}" id="create_post" class="btn btn-success">New Post</a>
+        <a href="{{ route( 'thread.create', $subject ) }}" id="create_thread_button" class="btn btn-success">New Post</a>
     </div>
 @endif

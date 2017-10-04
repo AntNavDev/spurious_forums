@@ -6,6 +6,7 @@ use App\Thread;
 use Illuminate\Http\Request;
 
 use App\Comment;
+use App\Subject;
 
 class ThreadController extends Controller
 {
@@ -24,9 +25,11 @@ class ThreadController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create( Subject $subject )
     {
-        //
+        $subject = Subject::find( $subject->id );
+
+        return view( 'thread.create', compact( 'subject' ) );
     }
 
     /**
@@ -37,7 +40,18 @@ class ThreadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $subject = Subject::find( $request[ 'subject_id' ] );
+
+        $new_thread = Thread::create([
+            'subject_id' => $subject->id,
+            'title' => $request[ 'thread_title' ],
+            'description' => $request[ 'thread_description' ],
+            'author' => $request[ 'author_id' ]
+        ]);
+
+        $new_thread->save();
+
+        return redirect()->route( 'subject.myThreads', compact( 'subject' ) );
     }
 
     /**
