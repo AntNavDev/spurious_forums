@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view( 'user.index' );
     }
 
     /**
@@ -71,7 +71,15 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $user->fill( [
+            'first_name' => $request[ 'first_name_input' ],
+            'last_name' => $request[ 'last_name_input' ],
+            'email' => $request[ 'email_input' ],
+        ] );
+
+        $user->save();
+
+        return redirect()->route( 'user.index' );
     }
 
     /**

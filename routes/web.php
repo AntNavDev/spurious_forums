@@ -16,7 +16,7 @@ Route::resource( 'subject', 'SubjectController' );
 Route::resource( 'thread', 'ThreadController' );
 Route::resource( 'comment', 'CommentController', [ 'only' => [ 'store', 'destroy', 'edit' ] ] );
 
-Route::get('/', 'HomepageController@index' )->name( 'homepage' );
+Route::get( '/', 'HomepageController@index' )->name( 'homepage' );
 
 Route::get( 'app-shell', function() {
     return view( 'app/shell' );

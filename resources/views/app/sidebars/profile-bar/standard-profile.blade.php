@@ -35,7 +35,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <h4><i class="fa fa-cogs"></i> <a href="{{ route( 'user.edit', Auth::user() ) }}">Settings</a></h4>
+                <h4><i class="fa fa-cogs"></i> <a href="{{ route( 'user.index' ) }}">Settings</a></h4>
             </div>
         </div>
 

@@ -39,6 +39,11 @@ class User extends Authenticatable
         return $this->profile_picture;
     }
 
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
     public function getFirstName()
     {
         return $this->first_name;
