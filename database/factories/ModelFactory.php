@@ -54,12 +54,12 @@ $factory->define( App\Thread::class, function( Faker $faker ) {
 } );
 
 $factory->define( App\Comment::class, function( Faker $faker ) {
-    $thread_id = rand( 1, 19 );
+    $thread_id = rand( 1, 44 );
     $author_id = rand( 1, 14 );
 
     return [
         'thread_id'  => $thread_id,
-        'description' => $faker->text( 35 ),
+        'description' => $faker->realText(),
         'author'      => $author_id,
     ];
 } );

@@ -1,0 +1,7 @@
+input {
+    min-width: 500px;
+}
+textarea {
+    min-width: 500px;
+    min-height: 250px;
+}

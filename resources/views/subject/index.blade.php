@@ -13,7 +13,7 @@
                 <div class="subject_threads">
                     <h4 class="thread_title">{{ $thread->title }}</h4>
                     {{ $thread->description }}
-                    <h6 class="align_right">Created by: {{ User::getNameFromId( $thread->author ) }}</h6>
+                    <h6 class="align_right">Created by: {{ User::getUsernameFromId( $thread->author ) }}</h6>
                 </div>
             </a>
         @endforeach

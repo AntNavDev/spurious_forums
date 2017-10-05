@@ -25,7 +25,7 @@
 <body>
     <div class="row">
 
-        <div id="homepage_sidebar" class="col-md-2 sidebar">
+        <div id="homepage_sidebar" class="col-md-2">
             @include( 'app.sidebars.profile-bar.standard-profile' )
         </div>
         <div class="col-md-8">

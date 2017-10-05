@@ -17,7 +17,7 @@
     @foreach( $comments as $comment )
         <div class="thread_comments">
             <h4 class="subject_title">'{{ $comment->description }}'</h4>
-            Posted by: {{ User::getNameFromId( $comment->author ) }}
+            Posted by: {{ User::getUsernameFromId( $comment->author ) }}
             @auth
                 @if( $comment->author == Auth::user()->id )
                     <a href="{{ route( 'comment.edit', $comment ) }}" class="btn edit_comment_button"><i class="fa fa-pencil-square-o" aria-hidden="true">edit</i></a>

@@ -1,4 +1,4 @@
-<div>
+<div class="profile_sidebar">
     <div class="row">
         <div class="col-md-12">
             <h4><a href="{{ route( 'homepage' ) }}" class"">Home</a></h4>

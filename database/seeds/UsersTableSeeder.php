@@ -16,6 +16,7 @@ class UsersTableSeeder extends Seeder
         User::insert( [
             'first_name'     => 'Anthony',
             'last_name'      => 'Navarro',
+            'username'       => 'rifner',
             'email'          => 'anavarro@three29.com',
             'password'       => '$2y$10$UHVBr8XE8oVXwHqOFBV6eO1U5CpTgtHAi2QsYqDYUSZ2pZoLnFB9C', //this encoded password is 'testing'
             'role'           => 'admin',
