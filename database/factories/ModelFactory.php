@@ -13,27 +13,33 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define( App\Subject::class, function( Faker $faker ) {
-    $moderators = [];
-    $mod_num = rand( 1, 3 );
-    for( $index = 0; $index <= $mod_num; $index++ )
-    {
-        $mod_id = rand( 2, 5 );
-        while( in_array( $mod_id, $moderators ) )
-        {
-            $mod_id = rand( 2, 5 );
-        }
-        $moderators[] = $mod_id;
-    }
+// $factory->define( App\Subject::class, function( Faker $faker ) {
+//     /*
+//     * Just in case I want random subjects again
+//     * =================================
+//     * For choosing random moderators
+//     * vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+//     */
+//     // $moderators = [];
+//     // $mod_num = rand( 1, 3 );
+//     // for( $index = 0; $index <= $mod_num; $index++ )
+//     // {
+//     //     $mod_id = rand( 2, 5 );
+//     //     while( in_array( $mod_id, $moderators ) )
+//     //     {
+//     //         $mod_id = rand( 2, 5 );
+//     //     }
+//     //     $moderators[] = $mod_id;
+//     // }
 
 
-    return [
-        'title'       => $faker->text( 20 ),
-        'description' => $faker->text( 35 ),
-        'moderators'  => $moderators,
-    ];
+//     return [
+//         'title'       => $faker->text( 20 ),
+//         'description' => $faker->text( 35 ),
+//         'moderators'  => $moderators,
+//     ];
 
-} );
+// } );
 
 $factory->define( App\Thread::class, function( Faker $faker ) {
     $subject_id = rand( 1, 14 );

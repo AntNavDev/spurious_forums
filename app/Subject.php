@@ -20,15 +20,7 @@ class Subject extends Model
     protected $fillable = [
         'title', 'description', 'moderators',
     ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    // protected $hidden = [
-    //     '',
-    // ];
+    
     public function threads()
     {
         return $this->hasMany( 'App\Thread' );
