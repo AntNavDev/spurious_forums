@@ -14,7 +14,7 @@
 Route::resource( 'user', 'UserController' );
 Route::resource( 'subject', 'SubjectController' );
 Route::resource( 'thread', 'ThreadController' );
-Route::resource( 'comment', 'CommentController', [ 'only' => [ 'store', 'destroy', 'edit' ] ] );
+Route::resource( 'comment', 'CommentController', [ 'only' => [ 'store', 'destroy', 'edit', 'update' ] ] );
 
 Route::get( '/', 'HomepageController@index' )->name( 'homepage' );
 

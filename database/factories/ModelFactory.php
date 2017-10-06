@@ -47,8 +47,8 @@ $factory->define( App\Thread::class, function( Faker $faker ) {
 
     return [
         'subject_id'  => $subject_id,
-        'title'       => $faker->text( 20 ),
-        'description' => $faker->text( 35 ),
+        'title'       => $faker->realText( 40, 5 ),
+        'description' => $faker->realText(),
         'author'      => $author_id,
     ];
 } );

@@ -13,60 +13,31 @@
 .align_right {
     text-align: right;
 }
-.delete_comment_button {
-    color: #DD1E1E;
-    background-color: #F2F6F9;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-.edit_comment_button {
-    color: #89C7E2;
-    background-color: #F2F6F9;
-    position: absolute;
-    top: 30px;
-    right: 0px;
-}
- .title_bar {
+.title_bar {
     text-align: center;
     color: #807D7E;
     font-size: 3em;
- }
- .thread_comments {
-    border: 1px solid #000000;
-    padding: 5px;
-    margin: 30px;
-    width: 40%;
-    position: relative;
- }
- .thread_description {
-    margin: 45px;
-    padding: 5px;
-    border: 1px solid #CBC3E5;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
- }
- .homepage_subjects {
+}
+.homepage_subjects {
     margin: 30px;
     padding: 5px;
     border: solid 1px #96AFDC;
     border-radius: 2em;
     border-width: 2px 4px;
     width: 60%;
- }
- .profile_sidebar {
+}
+.profile_sidebar {
     background-color: #364F5A;
     min-height: 100vh;
     color: #FFFFFF;
- }
- .profile_sidebar a:visited {
+}
+.profile_sidebar a:visited {
     color: inherit;
     text-decoration: none;
- }
- .subject_title {
+}
+.subject_title {
     color: #424288;
- }
+}
 .subject_threads {
     margin: 30px;
     padding: 5px;
@@ -74,29 +45,22 @@
     border-radius: 2em;
     border-width: 2px 4px;
     width: 60%;
- }
- .thread_title {
+}
+.thread_title {
     color: #E54315;
- }
- #add_comment {
-    text-align: center;
- }
- .comment_description {
-    height: 190px;
-    width: 500px;
- }
- .profile_pic {
+}
+.profile_pic {
     height: 25px;
     width: 25px;
     border-radius: 50%;
- }
- .post_thread {
+}
+.post_thread {
     margin: 20px;
- }
- .info_bar {
+}
+.info_bar {
     margin: 35px;
     text-align: center;
- }
- .moderator_box {
+}
+.moderator_box {
     border-style: ridge;
- }
+}

@@ -69,7 +69,6 @@ class CommentController extends Controller
      */
     public function edit(Comment $comment)
     {
-        dd('gonna build this later...');
         //
     }
 
@@ -82,7 +81,13 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-        //
+        $comment->fill( [
+            'description' => $request[ 'comment_' . $request[ 'index' ] ]
+        ] );
+
+        $comment->save();
+
+        return redirect()->back();
     }
 
     /**
