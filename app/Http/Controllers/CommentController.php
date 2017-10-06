@@ -81,13 +81,22 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
+        $thread = Thread::getThreadById( $comment[ 'thread_id' ] );
+        
         $comment->fill( [
-            'description' => $request[ 'comment_' . $request[ 'index' ] ]
+            'description' => $request[ 'comment_' . $request[ 'comment_index' ] ]
         ] );
 
-        $comment->save();
+        if( $comment->save() )
+        {
+            $request->session()->flash( 'success', 'Comment edit successful!' );
+        }
+        else
+        {
+            $request->session()->flash( 'failure', 'Something went wrong. Please try again.' );   
+        }
 
-        return redirect()->back();
+        return redirect()->route( 'thread.myComments', compact( 'thread' ) );
     }
 
     /**

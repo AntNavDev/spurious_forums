@@ -26,4 +26,11 @@ class Thread extends Model
     {
         return $this->hasMany( 'App\Comment' );
     }
+
+    public static function getThreadById( $id )
+    {
+        $thread = Thread::find( $id );
+
+        return $thread;
+    }
 }

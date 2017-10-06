@@ -38,7 +38,7 @@
                 {{ method_field('PUT') }}
                 <div contentEditable="false" name="comment" class="comment_style">{{ $comment->description }}</div>
                 <input type="hidden" class="comment_value" name="comment_{{ $index }}" value="{{ $comment->description }}">
-                <input type="hidden" name="index" value="{{ $index }}" ><br>
+                <input type="hidden" name="comment_index" value="{{ $index }}" ><br>
                 Posted by: {{ User::getUsernameFromId( $comment->author ) }}
             </form>
         </div>
