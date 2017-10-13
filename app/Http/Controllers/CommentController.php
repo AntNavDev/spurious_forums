@@ -82,7 +82,7 @@ class CommentController extends Controller
     public function update(Request $request, Comment $comment)
     {
         $thread = Thread::getThreadById( $comment[ 'thread_id' ] );
-        
+        // dd($request);
         $comment->fill( [
             'description' => $request[ 'comment_' . $request[ 'comment_index' ] ]
         ] );

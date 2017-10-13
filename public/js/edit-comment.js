@@ -9,7 +9,7 @@ $( document ).ready( function() {
     } );
 
     $( 'div[name="comment"]' ).keyup( function( event ) {
-        // event.preventDefault();
-        $( this ).parent().find( '.comment_value' ).val( $( this ).parent().find( 'div[name="comment"]' ).text() );
+        $( this ).parent().find( '.comment_value' ).val( $( this ).parent().find( 'div[name="comment"]' ).html() );
     } );
+
 } );

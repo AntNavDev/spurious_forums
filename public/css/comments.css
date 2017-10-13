@@ -33,6 +33,7 @@
 }
 .comment_style {
     color: #424288;
+    display: inline-block;
 }
 #add_comment {
     text-align: center;
@@ -56,4 +57,11 @@
     position: absolute;
     top: 0px;
     right: 20px !important;
+}
+textarea {
+    background-color: #F2F6F9;
+    height: auto;
+    outline:none;
+    resize: none;
+    border: none;
 }
