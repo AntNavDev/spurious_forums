@@ -15,11 +15,11 @@
             <input type="hidden" id="author_id" name="author_id" value="{{ Auth::user()->id }}">
             <label for="thread_title">
                 Title<br>
-                <input type="text" id="thread_title" name="thread_title">
+                <input type="text" id="thread_title" name="thread_title" required>
             </label><br>
             <label for="thread_description">
                 Description<br>
-                <textarea id="thread_description" name="thread_description"></textarea>
+                <textarea id="thread_description" name="thread_description" required></textarea>
             </label><br>
             <button type="submit" id="thread_post_button" class="btn btn-success">Post Thread</button>
         </div>
